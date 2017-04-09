@@ -169,15 +169,13 @@ def home(mastodon, rest):
             username = "  Boosted @" + toot['reblog']['account']['username']
             display_name = toot['reblog']['account']['display_name'] + ": "
             clean = re.sub('<[^<]+?>', '', toot['reblog']['content'])
-            content = username + display_name
-            cprint(content, 'blue')
-            cprint("  " + clean, 'white')
+            boostname = username + display_name
+            cprint(boostname, 'blue')
 
         # TODO: Toots with only HTML do not display (images, links)
         # TODO: Breaklines should be displayed correctly
         content = "  " + re.sub('<[^<]+?>', '', toot['content'])
-        #content = toot['content']
-        tprint(content + "\n", 'white', '')
+        print(content + "\n")
 
 
 @command
