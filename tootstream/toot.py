@@ -347,9 +347,16 @@ def main(instance, email, password):
         pass
     elif "instance" in config['default']:
         instance = config['default']['instance']
+<<<<<<< HEAD
 
     else: instance = input("Which instance would you like to connect to? eg: 'mastodon.social' ")
 
+=======
+
+    else: 
+        instance = input("Which instance would you like to connect to? eg: 'mastodon.social' ")
+
+>>>>>>> 4ee7fefef14a4fc3f5011625a7bb79313c069ddc
 
     client_id = None
     if "client_id" in config['default']:
