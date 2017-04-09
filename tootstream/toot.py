@@ -200,12 +200,9 @@ def home(mastodon, rest):
         # TODO: Toots with only HTML do not display (images, links)
         # TODO: Breaklines should be displayed correctly
         content = "  " + re.sub('<[^<]+?>', '', toot['content'])
-<<<<<<< HEAD
+
         print(content + "\n")
-=======
-        # content = toot['content']
-        tprint(content + "\n", 'white', '')
->>>>>>> master
+
 
 
 @command
@@ -350,13 +347,9 @@ def main(instance, email, password):
         pass
     elif "instance" in config['default']:
         instance = config['default']['instance']
-<<<<<<< HEAD
+
     else: instance = input("Which instance would you like to connect to? eg: 'mastodon.social' ")
 
-=======
-    else:
-        instance = input("Which instance would you like to connect to? ")
->>>>>>> master
 
     client_id = None
     if "client_id" in config['default']:
